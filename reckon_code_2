@@ -1,0 +1,36 @@
+let a = {
+    "text": "P Peter told me (actually he slurrred) that peter the pickle piper piped a pitted pickle before he petered out. Phew!"
+};
+let txt = a.text.toLowerCase();
+
+const b = {
+    "subTexts": [
+        "Peter",
+        "peter",
+        "Pick",
+        "Pi",
+        "Z"
+    ]
+};
+
+let arr = [], w = [], k=0, j;
+for (let i = 0; i < txt.length; i++) {
+    if ( b.subTexts[1][k] === txt[i] ) {  
+         arr.push(i);
+         k++;
+         if (arr.length > 1) {
+            for (var num = 0; num < arr.length - 1; num++) {
+                if (!(arr[num] < arr[num + 1])) {
+                    arr = [];
+                    k = 0;
+                }
+            }
+         }
+         
+    } else if (arr.length === b.subTexts[1].length){
+        w.push(arr);
+        arr = [];
+        k = 0;
+    } 
+}
+console.log(w);
