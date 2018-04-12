@@ -34,3 +34,33 @@ for (let i = 0; i < txt.length; i++) {
     } 
 }
 console.log(w);
+
+
+// const name = "Foyez";
+
+// console.log(
+// `{
+//     "candidate": ${name},
+// "text: ${a.text}",
+//     "results": [
+//         {
+//             "subtext": "${b.subTexts[0]}",
+//             "result": "1"
+//         },
+//         {
+//             "subtext": "${b.subTexts[1]}",
+//             "result": "1"
+//         },
+//         {
+//             "subtext": "${b.subTexts[2]}",
+//             "result": "1"
+//         },
+//         {
+//             "subtext": "${b.subTexts[3]}",
+//             "result": "1"
+//         },
+//         {
+//             "subtext": "${b.subTexts[4]}",
+//             "result": "1"
+//         },
+//     }`);
