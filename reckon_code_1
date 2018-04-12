@@ -1,0 +1,29 @@
+const api1 = {
+    "lower": 1,
+    "upper": 100
+};
+
+const api2 = {
+    "outputDetails": [
+        {
+            "divisor": 3,
+            "output": "Boss"
+        },
+        {
+            "divisor": 5,
+            "output": "Hogg"
+        }
+    ]
+};
+
+for (let i = api1.lower; i < api1.upper; i++){
+    let output;
+    if ((i % api2.outputDetails[0].divisor) == 0) {
+        output = api2.outputDetails[0].output;
+    } else if((i%api2.outputDetails[1].divisor)==0) {
+        output = api2.outputDetails[1].output;
+    } else {
+        output = '';
+    }
+    console.log(i + ": " + output);
+}
